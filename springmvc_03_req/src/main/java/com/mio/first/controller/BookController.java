@@ -2,6 +2,7 @@ package com.mio.first.controller;
 
 import com.mio.first.domain.Author;
 import com.mio.first.domain.Book;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,11 +10,37 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 @Controller
 @RequestMapping("/book")
 public class BookController {
+
+    //传入日期+时间 2088/08/28 9:30:50
+    @RequestMapping("/dataParam3")
+    @ResponseBody
+    public String dataParam3(@DateTimeFormat(pattern = "yyyy/MM/dd HH:mm:ss") Date date){
+        System.out.println("date: "+date);
+        return "{'module': 'date param'}";
+    }
+
+
+    //传入日期 2088-08-28
+    @RequestMapping("/dataParam2")
+    @ResponseBody
+    public String dataParam2(@DateTimeFormat(pattern = "yyyy-MM-dd") Date date){
+        System.out.println("date: "+date);
+        return "{'module': 'date param'}";
+    }
+
+    //传入日期 2088/08/28
+    @RequestMapping("/dataParam")
+    @ResponseBody
+    public String dataParam(Date date){
+        System.out.println("date: "+date);
+        return "{'module': 'date param'}";
+    }
 
     //参数是json，包含多个对象，接收到集合框架中
     @RequestMapping("/save7")
