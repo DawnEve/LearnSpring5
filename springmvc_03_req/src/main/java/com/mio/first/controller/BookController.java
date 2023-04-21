@@ -3,6 +3,7 @@ package com.mio.first.controller;
 import com.mio.first.domain.Author;
 import com.mio.first.domain.Book;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -14,10 +15,36 @@ import java.util.List;
 @RequestMapping("/book")
 public class BookController {
 
-    //接收集合
+    //参数是json，包含多个对象，接收到集合框架中
+    @RequestMapping("/save7")
+    @ResponseBody
+    public String save7(@RequestBody List<Book> list){ //参数前加注解
+        System.out.println(list);
+        return String.format("{'books': '%s'}", list);
+    }
+
+
+    //参数是json，接收为对象
+    @RequestMapping("/save6")
+    @ResponseBody
+    public String save6(@RequestBody Book book){ //参数前加注解
+        System.out.println(book);
+        return String.format("{'book': '%s'}", book);
+    }
+
+
+    //接收json
     @RequestMapping("/list")
     @ResponseBody
-    public String getList(@RequestParam List<String> likes){
+    public String getList(@RequestBody List<String> likes){
+        System.out.println(likes);
+        return String.format("{'likes': '%s'}", likes);
+    }
+
+    //接收集合
+    @RequestMapping("/list2")
+    @ResponseBody
+    public String getList2(@RequestParam List<String> likes){
         System.out.println(likes);
         return String.format("{'likes': '%s'}", likes);
     }
