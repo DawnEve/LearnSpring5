@@ -7,13 +7,33 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.Arrays;
+import java.util.List;
+
 @Controller
 @RequestMapping("/book")
 public class BookController {
 
-    @RequestMapping("/save")
+    //接收集合
+    @RequestMapping("/list")
     @ResponseBody
-    public String save(Book book){
+    public String getList(@RequestParam List<String> likes){
+        System.out.println(likes);
+        return String.format("{'likes': '%s'}", likes);
+    }
+
+    //接收数组
+    @RequestMapping("/array")
+    @ResponseBody
+    public String getArray(String[] likes){
+        System.out.println(Arrays.toString(likes));
+        return String.format("{'likes': '%s'}", Arrays.toString(likes));
+    }
+
+
+    @RequestMapping("/save5")
+    @ResponseBody
+    public String save5(Book book){
         System.out.println(book);
         return String.format("{'book': '%s'}", book);
     }
