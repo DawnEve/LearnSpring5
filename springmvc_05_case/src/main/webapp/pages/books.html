@@ -1,0 +1,72 @@
+<meta charset="utf-8">
+<script src="../js/vue-v2.5.22.js"></script>
+<script src="../js/axios.min-0.18.0.js"></script>
+
+<h1>Books 2</h1>
+<p>静态资源保存立刻可更新，不用重启Tomcat。</p>
+
+<div id="app">
+    <template v-for="book in dataList">
+        <p>{{book}}</p>
+    </template>
+    <hr>
+
+    新增图书:
+    <p> 类别 <input v-model="formData.type" /> </p>
+    <p> 名字 <input v-model="formData.name" /> </p>
+    <p> 价格 <input v-model="formData.price" /> </p>
+    <button @click="saveBook()">确定新增</button>
+</div>
+<script type="text/javascript">
+    var vm = new Vue({
+		//作用的元素
+        el: '#app',
+
+		//数据
+        data: {
+            dataList: [], //当前页面要展示的分页列表数据
+            formData: {}, //{'type':"接口", "name":"Java 基础", price:25}, //表单数据，用于新增数据信息
+            dialogFormVisible: false, //增加表达是否可见
+            dialogFormVisible4Edit: false, //编辑表达是否可见
+            pagination: {}, //分页模型数据，暂时弃用
+        },
+
+        //钩子函数，VUE对象初始化完成后自动执行
+        created(){
+            this.getAll();
+        },
+
+		//方法
+        methods: {
+          //重置表单
+            resetForm(){
+                this.formData={};
+            },
+
+            //弹出添加窗口
+            openSave(){
+                this.dialogFormVisible = true;
+                this.resetForm();
+            },
+
+            //添加
+            saveBook(){
+                /*
+                console.log("save ... book")
+                console.log(this.formData)
+                */
+                axios.post("/test5/books", this.formData).then( (res)=>{
+                    console.log(res.data)
+                });
+            },
+
+            //主页到表查询
+            getAll(){
+                axios.get("/test5/books").then( (res)=>{
+                    this.dataList=res.data;
+                    //console.log(res.data)
+                } );
+            }
+        }
+    })
+</script>

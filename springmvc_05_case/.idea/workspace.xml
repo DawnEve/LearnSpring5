@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e283b829-43ec-4217-b435-cda25002df2e" name="Changes" comment="" />
+    <list default="true" id="e283b829-43ec-4217-b435-cda25002df2e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../springmvc_04_response/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springmvc_04_response/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +15,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -57,10 +60,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "G:/java_code/LearnSpring5/springmvc_05_case",
+    "last_opened_file_path": "G:/java_code/LearnSpring5/springmvc_05_case/src/main/webapp/js",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -69,18 +73,21 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\java_code\LearnSpring5" />
+      <recent name="G:\java_code\LearnSpring5\springmvc_05_case\src\main\webapp\js" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat: springmvc_04_response" type="com.poratu.idea.plugins.tomcat">
+    <configuration name="Tomcat: springmvc_05_case" type="com.poratu.idea.plugins.tomcat">
       <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
       <predefined_log_file enabled="true" id="Tomcat Access Log" />
       <predefined_log_file id="Tomcat Catalina Log" />
       <predefined_log_file id="Tomcat Manager Log" />
       <predefined_log_file id="Tomcat Host Manager Log" />
-      <option name="contextPath" value="test4" />
+      <option name="contextPath" value="test5" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="envOptions">
+        <map />
+      </option>
       <option name="extraClassPath" value="" />
       <option name="tomcatInfo">
         <TomcatInfo>
@@ -90,7 +97,7 @@
         </TomcatInfo>
       </option>
       <option name="vmOptions" value="" />
-      <module name="springmvc_04_response" />
+      <module name="springmvc_05_case" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

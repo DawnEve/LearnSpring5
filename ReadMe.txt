@@ -13,5 +13,6 @@ springmvc_04_response 响应
     v0.0.7 04_res 响应：json
     v0.0.8@04_res 响应：RESTful 风格 入门案例
     v0.0.9@04_res 响应：RESTful 风格 简化写法（RESTful 标准开发）
+    v0.1.0@04_res 响应：RESTful 风格 实例：前后端分离 图书管理系统
 
 	
