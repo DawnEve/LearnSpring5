@@ -10,5 +10,6 @@ Tomcat 9，插件: Smart Tomcat;
 对着老项目按F5，输入新名字就可以复制一份出来
 springmvc_04_response 响应
     v0.0.6 04_res IDEA 新建webapp项目
-	
+    v0.0.7 04_res 响应：json
+
 	
