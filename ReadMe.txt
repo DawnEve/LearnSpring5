@@ -12,5 +12,6 @@ springmvc_04_response 响应
     v0.0.6 04_res IDEA 新建webapp项目
     v0.0.7 04_res 响应：json
     v0.0.8@04_res 响应：RESTful 风格 入门案例
+    v0.0.9@04_res 响应：RESTful 风格 简化写法（RESTful 标准开发）
 
 	
