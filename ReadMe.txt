@@ -7,3 +7,8 @@ Tomcat 9，插件: Smart Tomcat;
     v0.0.4 03_req 请求参数的接收: json格式的参数
     v0.0.5 03_req 请求参数的接收: 日期格式
 
+对着老项目按F5，输入新名字就可以复制一份出来
+springmvc_04_response 响应
+    v0.0.6 04_res IDEA 新建webapp项目
+	
+	
