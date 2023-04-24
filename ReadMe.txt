@@ -15,7 +15,13 @@ springmvc_04_response 响应
     v0.0.9@04_res 响应：RESTful 风格 简化写法（RESTful 标准开发）
     v0.1.0@04_res 响应：RESTful 风格 实例：前后端分离 图书管理系统
 
+
 需要用到 MyBatis 框架，开始学习它
 MyBatis-demo 父工程/子模块 demo1
 	v0.1.1@MyBatis demo1 入门案例
 		iml 文件是干啥的？
+	v0.1.2@MyBatis demo2 简化写法与优化; mybatisX 插件
+
+
+
+

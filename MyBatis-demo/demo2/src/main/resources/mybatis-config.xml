@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!-- 类型别名，方便xml中返回类型不用加这个前缀，变 com.mio.pojo.User 为 User；
+ 该设置要放到mapper 前面，甚至最前面 -->
+    <typeAliases>
+        <package name="com.mio.pojo"/>
+    </typeAliases>
+
+
+    <environments default="development">
+        <!-- 配置数据库的连接环境，可配置多个environment，通过default属性切换某一个的id -->
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <!-- mysql 连接信息 -->
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://y.biomooc.com:7070/mybatis?useSSL=false"/>
+                <property name="username" value="root"/>
+                <property name="password" value="123456"/>
+            </dataSource>
+        </environment>
+
+    </environments>
+
+    <mappers>
+        <!-- SQL 映射文件
+        <mapper resource="com/mio/mapper/UserMapper.xml"/>
+        -->
+        <!-- Mapper 代理方式 -->
+        <package name="com.mio.mapper"/>
+    </mappers>
+
+</configuration>
