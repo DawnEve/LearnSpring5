@@ -21,6 +21,7 @@ MyBatis-demo 父工程/子模块 demo1
 	v0.1.1@MyBatis demo1 入门案例
 		iml 文件是干啥的？
 	v0.1.2@MyBatis demo2 简化写法与优化; mybatisX 插件
+	v0.1.3@MyBatis demo2 品牌管理: 基于resultMap解决db字段和pojo属性不一致问题
 
 
 
