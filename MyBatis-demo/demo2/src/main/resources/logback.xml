@@ -3,10 +3,20 @@
     <!--    console表示当前日志信息是可以输出到控制台的-->
     <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>【%level】  %cyan(【%thread】) %boldGreen(%logger{15}) - %msg %n</pattern>
+            <!--
+            https://blog.csdn.net/qq_38701905/article/details/80739240
+
+            %d{yyyy-MM-dd HH:mm:ss SSS}
+            %-3level %logger{1024}
+            %boldGreen(%logger{15})
+            %class{35}
+            -->
+            <pattern>[%level] %blue(%d{HH:mm:ss.SSS}) %cyan([%thread]) %boldGreen(%logger{15}) - %msg %n</pattern>
         </encoder>
     </appender>
-    <logger name="com.Carter_x" level="DEBUG" additivity="false">
+
+    <!-- name 是要扫描的包路径; level 是消息等级, TRACE < DEBUG < INFO < WARN < FATAL -->
+    <logger name="com.mio.mapper" level="DEBUG" additivity="false">
         <appender-ref ref="Console"/>
     </logger>
 </configuration>

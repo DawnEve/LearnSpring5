@@ -40,6 +40,21 @@
 
 
 <!--    <select id="selectById" resultType="brand">-->
+    <!--
+        * 参数占位符：
+            1. #{} 替换为?，为了防止SQL注入【传参时用#{}】
+            2. ${} 拼接参数，会存在SQL注入问题，不安全；速度会快一点
+            使用场合：
+                * 用户参数传递：使用 #{}，不要相信用户的输入
+                * 程序员自己的参数，可以信任自己，用来替换不固定的表名或列名，可以使用 ${}
+        * 参数类型 <select parameterType="int"，可省略，一般不写
+        * 特殊字符的传参：id>10没问题，但是id<10就报错!
+            1 使用转义字符(就是实体entity): &lt; 代替<
+            2 CDATA区: xml中输入CD，IDEA会提醒自动补齐:
+                <![CDATA[
+                    这里写什么都可以，包括<
+                ]]>
+     -->
     <select id="selectById" resultMap="brandResultMap">
         select *
         from tb_brand where id=#{id};
