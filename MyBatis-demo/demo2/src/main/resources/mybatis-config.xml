@@ -18,7 +18,8 @@
             <dataSource type="POOLED">
                 <!-- mysql 连接信息 -->
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://y.biomooc.com:7070/mybatis?useSSL=false"/>
+                <!-- 注意：1.不加utf8会导致模糊查询没返回结果; 2.本来该使用&，但是java中必须使用其实体 -->
+                <property name="url" value="jdbc:mysql://y.biomooc.com:7070/mybatis?useSSL=false&amp;characterEncoding=utf8"/>
                 <property name="username" value="root"/>
                 <property name="password" value="123456"/>
             </dataSource>

@@ -21,3 +21,20 @@ MyBatis-demo 父工程/子模块 demo1
 	v0.1.3@MyBatis demo2 品牌管理: 基于resultMap解决db字段和pojo属性不一致问题
 	v0.1.4@MyBatis demo2 品牌管理: 按id查询，sql语句日志
 	v0.1.5@MyBatis add changeLog.txt
+	v0.1.6@MyBatis demo2 多条件查询，动态多/单条件查询; 基于ip查地区 
+		数据库连接要加 utf8，否则无结果返回
+		新建父项目 Utils，里面子模块 练习基于ip查找地区
+##==> commit at local: G:\java_code\LearnSpring5\
+#####====> push to https://github.com/DawnEve/LearnSpring5
+
+
+
+
+
+
+
+
+######
+push to github:
+	git remote add origin git@github.com:DawnEve/LearnSpring5.git
+	git push origin master
