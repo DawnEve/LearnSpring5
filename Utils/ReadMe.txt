@@ -12,6 +12,8 @@
 
     * MachineCode/ 机器码
         依赖 Command 类
-    * EncryptUtil/ 加密类，根据几个字符串加密
+    * EncryptUtil/ 加密类，根据几个字符串加密 //没搞明白 //todo
+
+    * RSADemo/ RSA 加密、解密方法
 
 
