@@ -6,3 +6,9 @@ dustbin
 
 *class
 
+
+
+# secret file
+*id_rsa*
+*.crt
+*.licence

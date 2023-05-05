@@ -16,7 +16,12 @@
     </appender>
 
     <!-- name 是要扫描的包路径; level 是消息等级, TRACE < DEBUG < INFO < WARN < FATAL -->
-    <logger name="com.mio.mapper" level="DEBUG" additivity="false">
+    <root level="debug">
         <appender-ref ref="Console"/>
+    </root>
+    <!--
+    <logger name="com.mio.mapper" level="DEBUG" additivity="false">
+        <appender-ref ref="Console" />
     </logger>
+    -->
 </configuration>

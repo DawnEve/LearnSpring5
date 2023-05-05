@@ -118,4 +118,55 @@
     </select>
 
 
+    <!-- 添加数据 -->
+    <insert id="add">
+        insert into tb_brand(brand_name, company_name, ordered, description, status)
+        values(#{brandName}, #{companyName}, #{ordered}, #{description}, #{status});
+    </insert>
+
+    <!-- 添加数据，并返回主键id
+        useGeneratedKeys="true" 说名要获取自动获取的键
+        keyProperty="id" 绑定要获取的属性名称
+    -->
+    <insert id="add2" useGeneratedKeys="true" keyProperty="id">
+        insert into tb_brand(brand_name, company_name, ordered, description, status)
+        values(#{brandName}, #{companyName}, #{ordered}, #{description}, #{status});
+    </insert>
+
+
+    <!-- 修改数据 -->
+    <update id="update">
+        update tb_brand
+        set
+            brand_name=#{brandName},
+            company_name=#{companyName},
+            ordered=#{ordered},
+            description=#{description},
+            status=#{status}
+        where id=#{id}
+    </update>
+
+    <!-- 修改数据: 动态修改 -->
+    <update id="updateDyn">
+        update tb_brand
+        <set> <!-- 使用set标签 代替 set 关键字，能自动处理异常：最后一个是逗号？set后是空？ -->
+            <if test="brandName != null and brandName != '' ">
+                brand_name=#{brandName},
+            </if>
+            <if test="companyName != null and companyName != '' ">
+                company_name=#{companyName},
+            </if>
+            <if test="ordered != null "> <!-- int 类型，只需要判断是否是null -->
+                ordered=#{ordered},
+            </if>
+            <if test="description != null and description != '' ">
+                description=#{description},
+            </if>
+            <if test="status != null">
+                status=#{status}
+            </if>
+        </set>
+        where
+            id=#{id}
+    </update>
 </mapper>

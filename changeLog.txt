@@ -26,6 +26,7 @@ MyBatis-demo 父工程/子模块 demo1
 		新建父项目 Utils，里面子模块 练习基于ip查找地区
 	v0.1.7@MyBatis Utils 项目尝试 sliver login 逻辑
 	v0.1.8@MyBatis Utils uuid/ RSA 测试加密、解密
+	v0.1.9@MyBatis demo2 品牌管理: 添加数据, 返回主键; 修改字段,动态修改字段
 ##==> commit at local: G:\java_code\LearnSpring5\
 #####====> push to https://github.com/DawnEve/LearnSpring5
 

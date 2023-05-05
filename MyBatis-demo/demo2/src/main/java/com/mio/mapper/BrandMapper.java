@@ -27,4 +27,12 @@ public interface BrandMapper {
 
     //单条件动态查询
     List<Brand> selectByConditionSingle(Brand brand);
+
+    //添加数据
+    void add(Brand brand);
+    void add2(Brand brand);
+
+    //修改数据
+    int update(Brand brand);
+    int updateDyn(Brand brand); //动态sql
 }
