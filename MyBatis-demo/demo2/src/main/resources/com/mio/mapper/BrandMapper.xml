@@ -169,4 +169,26 @@
         where
             id=#{id}
     </update>
+
+
+    <!-- 删除 -->
+    <delete id="deleteById">
+        delete from tb_brand
+        where id=#{id}
+    </delete>
+
+    <!-- 批量删除
+        mybatis 会将数组参数 封装为一个map集合，
+            * 默认：array: 数组，也就是 collection="array"
+            * 或在接口中使用 注解 @Param("ids")参数指定xml中接收参数的变量名
+    -->
+    <delete id="deleteByIds">
+        delete from tb_brand
+        where id in
+        <foreach collection="array" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+
 </mapper>

@@ -35,4 +35,11 @@ public interface BrandMapper {
     //修改数据
     int update(Brand brand);
     int updateDyn(Brand brand); //动态sql
+
+    //删除
+    void deleteById(int id);
+
+//    void deleteByIds(@Param("ids") int[] ids);
+    void deleteByIds(int[] ids);
+    //不写注解，则xml中要使用 collection="array"，否则报错 Parameter 'ids' not found
 }
