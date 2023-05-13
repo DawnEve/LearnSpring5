@@ -28,6 +28,7 @@ MyBatis-demo 父工程/子模块 demo1
 	v0.1.8@MyBatis Utils uuid/ RSA 测试加密、解密
 	v0.1.9@MyBatis demo2 品牌管理: 添加数据, 返回主键; 修改字段,动态修改字段
 	v0.2.0@MyBatis demo2 品牌管理: 删除、批量删除
+	v0.2.1@MyBatis demo2 品牌管理: 参数传递，多个，单个(pojo,集合框架),@Param注解
 ##==> commit at local: G:\java_code\LearnSpring5\
 #####====> push to https://github.com/DawnEve/LearnSpring5
 

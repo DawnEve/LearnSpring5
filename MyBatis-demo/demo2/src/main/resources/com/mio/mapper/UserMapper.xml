@@ -13,7 +13,41 @@
     </select>
     <select id="selectById" resultType="User">
         select *
-        from tb_user where id=#{id};
+        from tb_user where id=#{xx};
+        <!-- 单个参数时，怎么写都可以接收到。why? //todo -->
+    </select>
+
+
+    <select id="select" resultType="user">
+        select *
+        from tb_user
+        where
+        <!--
+        username=#{arg0} and password=#{arg1};
+        username=#{username} and password=#{password};
+        -->
+        username=#{param1} and password=#{param2};
+    </select>
+
+    <select id="select2" resultType="com.mio.pojo.User">
+        select *
+        from tb_user
+        where
+        username in (
+        <foreach collection="myarr" item="username" separator=",">
+            #{username}
+        </foreach>
+        );
+    </select>
+
+
+    <select id="selectByMap" resultType="com.mio.pojo.User">
+        select * from tb_user
+        where
+        <!-- username=#{mymap.username} and password=#{mymap.password}; -->
+        <foreach collection="mymap" item="user">
+            username=#{user.username} and password=#{user.password};
+        </foreach>
     </select>
 
 </mapper>

@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MyBatisTest {
+public class MyBatisBrandTest {
     @Test
     public void testSelectAll() throws IOException {
         //1. 获取 SqlSessionFactory 对象
